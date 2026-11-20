@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ICT 10 - Element Checker</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+
+    <style>
+        body {
+            background-color: #f1f5f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #44464b;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar-brand:hover {
+            color: #bfdbfe;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: #bfdbfe !important;
+        }
+
+        .main-content {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 15px;
+        }
+
+        .content-card {
+            width: 100%;
+            max-width: 600px;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #44464b;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .header p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            background-color: #2563eb;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                ICT 10 Q2 PROJECT
+            </a>
+
+            <button class="navbar-toggler bg-light" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="element.html">Element Checker</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="school.html">School Clubs</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="meet.html">Meet the Creator</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <div class="content-card">
+
+            <header class="header">
+                <h1>Nonmetal Symbols</h1>
+                <p>Enter a nonmetal element symbol to find its information.</p>
+            </header>
+
+            <div class="form-group">
+                <label for="element_symbol">
+                    Nonmetal Element Symbol
+                </label>
+
+                <input
+                    type="text"
+                    id="element_symbol"
+                    placeholder="e.g., O, Ar, He"
+                >
+            </div>
+
+            <button py-click="add_element">
+                Search Element
+            </button>
+
+            <div id="output1">
+                <p>Element information will appear here.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- PyScript -->
+    <script type="py" src="element.py"></script>
+
+</body>
+</html>
